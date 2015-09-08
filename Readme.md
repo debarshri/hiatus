@@ -57,7 +57,11 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
   ```
   hiatus-admin --list
 
-  hiatus-admin --kill=<id>
+  hiatus-admin --kill=<task-id>
+  
+  hiatus-admin --delete=<job-id>
 
   hiatus-admin --executing
+  
+  hiatus-admin --execute=<job-id>
   ```
