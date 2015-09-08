@@ -15,7 +15,9 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
   * Refreshes data between the tables every 'y' hours. Current implementation y = 2 hours.
   
  - Full/Complete refresh
- * Refreshes table completely.
+  * Refreshes table completely.
+
+#### Configuration
  
  ```
  [
