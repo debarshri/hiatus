@@ -1,0 +1,13 @@
+[
+     {
+      "conf1" : {
+                 "source" : "hbase_table",
+                 "target"  : "oracle_table",
+                 "mapping" : {
+                                "hbase.col1":"ora.col1"
+                             },
+                 "sync" : "asap",
+                 "upsert" : true
+             }
+      }
+]

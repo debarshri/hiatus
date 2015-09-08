@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+java -jar $HIATUS_HOME/hiatus.jar $1
