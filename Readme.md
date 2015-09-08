@@ -34,3 +34,22 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
        }
  ]
  ```
+ 
+ #### Example
+ 
+ ```
+ hiatus --conf=conf/table.hiatus --sql=<connection-string> --hbase=<zookeeper-quorom1>,<zookeeper-quorom2>,<zookeeper-quorom3>
+ ```
+
+
+ ```
+ hiatus --server_restart
+ ```
+
+ ```
+ hiatus --server_start
+ ```
+
+ ```
+ hiatus --server_start
+ ```
