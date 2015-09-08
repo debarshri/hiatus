@@ -52,7 +52,7 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
  hiatus-server --server_stop
  ```
  
- ##### Administration
+ #### Administration
  
   ```
   hiatus-admin --list
