@@ -35,7 +35,7 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
  ]
  ```
  
- #### Example (Proposed specs)
+#### Example (Proposed specs)
  
 ##### Submitting configurations
  ```
@@ -51,8 +51,8 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
  
  hiatus-server --server_stop
  ```
- 
- #### Administration
+
+##### Administration
  
   ```
   hiatus-admin --list
