@@ -12,6 +12,9 @@ public class HiatusConfiguration {
     private SyncStrategy syncStrategy;
     private boolean upsert;
 
+    public HiatusConfiguration() {
+    }
+
     public HiatusConfiguration(String configurationName, ORATable oraTable,
                                HBaseTable hBaseTable,
                                Mapping mapping,

@@ -49,6 +49,8 @@ Inspired by Stripe's [MoSQL](https://github.com/debarshri/hiatus.git), this is o
  
  hiatus-server --server_start
  
+ hiatus-server --server_start
+ 
  hiatus-server --server_stop
  ```
 

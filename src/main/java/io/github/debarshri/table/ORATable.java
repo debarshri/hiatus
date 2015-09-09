@@ -7,6 +7,10 @@ public class ORATable {
     private List<String> pk;
     private String tableName;
 
+
+    public ORATable() {
+    }
+
     public ORATable(String target) {
 
         this.tableName = target;

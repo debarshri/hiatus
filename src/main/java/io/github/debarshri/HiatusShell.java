@@ -32,7 +32,7 @@ public class HiatusShell {
 
         OptionSet parse = Parser.parser().parse(args);
 
-        HiatusConfigurationManager hiatusConfigurationManager;
+        HiatusConfigurationManager hiatusConfigurationManager = null;
 
         if (parse.has("conf")) {
             String conf = parse.valueOf("conf").toString();
@@ -50,7 +50,8 @@ public class HiatusShell {
 
         //TODO Start streaming daemon
         //TODO setup admin
-        HiatusAdmin hiatusAdmin = new HiatusAdmin();
+        HiatusAdmin hiatusAdmin = new HiatusAdmin(hiatusConfigurationManager);
+        hiatusAdmin.invoke();
 
     }
 

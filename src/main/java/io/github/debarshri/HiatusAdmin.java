@@ -1,35 +1,35 @@
 package io.github.debarshri;
 
-import io.github.debarshri.configuration.SyncStrategy;
-import io.github.debarshri.table.HBaseTable;
-import io.github.debarshri.table.ORATable;
+import io.github.debarshri.configuration.HiatusConfigurationManager;
+import org.apache.http.client.fluent.Request;
+import org.apache.http.client.fluent.Response;
+import org.apache.http.entity.ContentType;
+import org.codehaus.jackson.map.ObjectMapper;
 
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
 
 public class HiatusAdmin {
 
-    public void updateConf(String confLocation)
-    {
-        //todo
+    private HiatusConfigurationManager hiatusConfigurationManager;
+
+    public HiatusAdmin(HiatusConfigurationManager hiatusConfigurationManager) {
+
+        this.hiatusConfigurationManager = hiatusConfigurationManager;
     }
 
-    public void sync(HBaseTable hbaseTable, ORATable oracleTable)
-    {
-        //todo
+    public void invoke() {
+        try {
+            Request request = Request.Post("http://localhost:9080/add").bodyString(convert(hiatusConfigurationManager), ContentType.APPLICATION_JSON);
+            Response execute = request.execute();
+            System.out.println(execute.returnContent().asString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public void sync(HBaseTable hbaseTable, ORATable oracleTable, TimeUnit timeUnit)
-    {
-        //todo
-    }
-
-    public void sync(HBaseTable hbaseTable, ORATable oracleTable, SyncStrategy syncStrategy)
-    {
-        //todo
-    }
-
-    public void lastUpdated(ORATable oraTable)
-    {
-        //todo
+    private String convert(HiatusConfigurationManager hiatusConfigurations) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.writeValueAsString(hiatusConfigurations);
     }
 }

@@ -3,6 +3,17 @@ package io.github.debarshri.table;
 import java.util.Map;
 
 public class Mapping {
+    public Map<String, String> getOraToHBase() {
+        return oraToHBase;
+    }
+
+    public Mapping() {
+    }
+
+    public Map<String, String> getHbaseToOra() {
+        return hbaseToOra;
+    }
+
     private Map<String, String> oraToHBase;
     private Map<String, String> hbaseToOra;
 
